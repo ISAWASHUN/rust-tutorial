@@ -1,11 +1,11 @@
-//間数
-fn say_hello() {
-    println!("Hello!");
-}
+//関数
+// fn say_hello() {
+//     println!("Hello!");
+// }
 
-fn add(a: i32, b: i32) -> i32 {
-    a + b
-}
+// fn add(a: i32, b: i32) -> i32 {
+//     a + b
+// }
 
 fn main() {
     //出力
@@ -82,4 +82,52 @@ fn main() {
 
     // say_hello();
     // println!("{}", add(1,2));
+
+    // 条件分岐
+    let x: i32 = 5;
+
+    if x > 0 {
+        println!("OK!");
+    }
+
+    if x > 0 && x < 10 {
+        println!("0 < x < 10");
+    }
+
+    //match
+    let x: i32 = 0;
+    match x {
+        0 => println!("Zero"),
+        1 => println!("one"),
+        _ => println!("Other"),
+    };
+
+    //loop
+    // let mut cnt: i32 = 0;
+    // loop {
+    //     println!("Hello");
+    //     if cnt == 10 {
+    //         break;
+    //     }
+    //     cnt += 1;
+    // }
+
+    //while
+    let mut cnt: i32 = 0;
+    while cnt M= 10 {
+        println!("Hello");
+        cnt += 1;
+    }
+
+    //for
+    for i in [1,2,3] {
+        println!("Hello, {}", i);
+    }
+
+
+    let r: Range<i32> = 1..10;
+    for x: i32 in r {
+        println!("{}", x * x);
+    }
 }
+
