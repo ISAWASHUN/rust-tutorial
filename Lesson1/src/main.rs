@@ -84,50 +84,73 @@ fn main() {
     // println!("{}", add(1,2));
 
     // 条件分岐
-    let x: i32 = 5;
+    // let x: i32 = 5;
 
-    if x > 0 {
-        println!("OK!");
-    }
+    // if x > 0 {
+    //     println!("OK!");
+    // }
 
-    if x > 0 && x < 10 {
-        println!("0 < x < 10");
-    }
+    // if x > 0 && x < 10 {
+    //     println!("0 < x < 10");
+    // }
 
-    //match
-    let x: i32 = 0;
-    match x {
-        0 => println!("Zero"),
-        1 => println!("one"),
-        _ => println!("Other"),
-    };
+    // //match
+    // let x: i32 = 0;
+    // match x {
+    //     0 => println!("Zero"),
+    //     1 => println!("one"),
+    //     _ => println!("Other"),
+    // };
 
-    //loop
+    // //loop
+    // // let mut cnt: i32 = 0;
+    // // loop {
+    // //     println!("Hello");
+    // //     if cnt == 10 {
+    // //         break;
+    // //     }
+    // //     cnt += 1;
+    // // }
+
+    // //while
     // let mut cnt: i32 = 0;
-    // loop {
+    // while cnt M= 10 {
     //     println!("Hello");
-    //     if cnt == 10 {
-    //         break;
-    //     }
     //     cnt += 1;
     // }
 
-    //while
-    let mut cnt: i32 = 0;
-    while cnt M= 10 {
-        println!("Hello");
-        cnt += 1;
-    }
-
-    //for
-    for i in [1,2,3] {
-        println!("Hello, {}", i);
-    }
+    // //for
+    // for i in [1,2,3] {
+    //     println!("Hello, {}", i);
+    // }
 
 
-    let r: Range<i32> = 1..10;
-    for x: i32 in r {
-        println!("{}", x * x);
-    }
+    // let r: Range<i32> = 1..10;
+    // for x: i32 in r {
+    //     println!("{}", x * x);
+    // }
+
+    let mut v1: Vec<i32> = vec![1,2,3];
+    println!("{:?}", v1.as_ptr());
+    println!("{:?}", &v1[0]);
+
+    println("vl1 length: {}", v1.len());
+    println("vl1 capacity: {}", v1.capacity());
+
+    println!("{:?}", v1.as_ptr());
+    let v2: Vec<i32> = v1.clone();
+    println!("{:?}", v2.as_ptr());
+
+    let = s1: String = String::from("Hello");
+    let s2: String = String::from("Rust");
+    let (s: String = s1: String, s2: String, s3: String) = concat(s1,s2);
+
+    println!("{:?}", s);
+    println!("{:?}", s1);
+    println!("{:?}", s2);
+}
+
+fn concat(a: String, b:String) -> (String, String, String) {
+    let c: String = format!("{}, {}", a, b);
 }
 
