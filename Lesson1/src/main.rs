@@ -143,14 +143,15 @@ fn main() {
 
     let = s1: String = String::from("Hello");
     let s2: String = String::from("Rust");
-    let (s: String = s1: String, s2: String, s3: String) = concat(s1,s2);
+    let s: String = concat(a: &s1, b: &s2);
 
     println!("{:?}", s);
     println!("{:?}", s1);
     println!("{:?}", s2);
 }
 
-fn concat(a: String, b:String) -> (String, String, String) {
+fn concat(a: &String, b: &String) -> String {
     let c: String = format!("{}, {}", a, b);
+    c
 }
 
