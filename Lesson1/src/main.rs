@@ -130,28 +130,42 @@ fn main() {
     //     println!("{}", x * x);
     // }
 
-    let mut v1: Vec<i32> = vec![1,2,3];
-    println!("{:?}", v1.as_ptr());
-    println!("{:?}", &v1[0]);
+    // let mut v1: Vec<i32> = vec![1,2,3];
+    // println!("{:?}", v1.as_ptr());
+    // println!("{:?}", &v1[0]);
 
-    println("vl1 length: {}", v1.len());
-    println("vl1 capacity: {}", v1.capacity());
+    // println("vl1 length: {}", v1.len());
+    // println("vl1 capacity: {}", v1.capacity());
 
-    println!("{:?}", v1.as_ptr());
-    let v2: Vec<i32> = v1.clone();
-    println!("{:?}", v2.as_ptr());
+    // println!("{:?}", v1.as_ptr());
+    // let v2: Vec<i32> = v1.clone();
+    // println!("{:?}", v2.as_ptr());
 
-    let = s1: String = String::from("Hello");
-    let s2: String = String::from("Rust");
-    let s: String = concat(a: &s1, b: &s2);
+    // let = s1: String = String::from("Hello");
+    // let s2: String = String::from("Rust");
+    // let s: String = concat(a: &s1, b: &s2);
 
-    println!("{:?}", s);
-    println!("{:?}", s1);
-    println!("{:?}", s2);
+    // println!("{:?}", s);
+    // println!("{:?}", s1);
+    // println!("{:?}", s2);
+
+    let x: Box<i32> = Box::new(1);
+    println!("x: {:p}", x);
+    println!("*x + 2 = {}", *x + 2);
+
+    let a: Rc<String> = Rc::new("Hello".to_string());
+    println("count1: {}", Rc::strong_count(&a));
+
+    {
+        let b: Rc<String> = a.clone();
+        println("count2: {}", Rc::strong_count(&a));
+        println("count2: {}", Rc::strong_count(&b));
+    }
+    println!("count1: {}", Rc::strong_count(&a));
 }
 
-fn concat(a: &String, b: &String) -> String {
-    let c: String = format!("{}, {}", a, b);
-    c
-}
+// fn concat(a: &String, b: &String) -> String {
+//     let c: String = format!("{}, {}", a, b);
+//     c
+// }
 
